@@ -25,7 +25,7 @@ mdc: true
 
 **Especialización en Gestión de Redes de Datos**
 
-Universidad Tecnológica de Pereira
+Universidad Nacional de Colombia
 
 <div class="abs-br m-6 text-sm opacity-70">
 Material académico para 10 horas
@@ -35,7 +35,7 @@ Material académico para 10 horas
 
 ## layout: intro
 
-# Estructura del curso (10 horas)
+# Estructura del curso
 
 | Sesión | Duración  | Tema principal               |
 | ------ | --------- | ---------------------------- |
