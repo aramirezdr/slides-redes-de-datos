@@ -56,7 +56,7 @@ Material académico para 10 horas
 
 # Resultados de aprendizaje
 
-Al finalizar las 10 horas, el estudiante podrá:
+Al finalizar el estudiante podrá:
 
 <v-clicks>
 
