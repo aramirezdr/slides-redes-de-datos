@@ -19,7 +19,7 @@ mdc: true
 
 # Fundamentos y Diseño de Data Center
 
-## Unidad 1 — 10 horas de clase
+## Unidad 1
 
 ### Redes de Datos
 
