@@ -1,25 +1,22 @@
 ---
 theme: default
-title: Fundamentos y Diseño de Data Center — 10 horas
+title: Unidad 1 — Fundamentos y Diseño de Data Center
 info: |
   Unidad 1 — Redes de Datos
   Especialización en Gestión de Redes de Datos
   Universidad Nacional de Colombia
-  10 horas de clase
+  Duración total: 10 horas
 author: Universidad Nacional de Colombia
-date: Abril 2026
+date: 2026
 class: text-center
-transition: slide-left
 highlighter: shiki
 lineNumbers: false
-drawings:
-  persist: false
 mdc: true
 ---
 
-# Fundamentos y Diseño de Data Center
+# Unidad 1
 
-## Unidad 1
+## Fundamentos y Diseño de Data Center
 
 ### Redes de Datos
 
@@ -28,46 +25,42 @@ mdc: true
 Universidad Nacional de Colombia
 
 <div class="abs-br m-6 text-sm opacity-70">
-Material académico para 10 horas
+Duración total: 10 horas
 </div>
 
 ---
+layout: intro
+---
 
-## layout: intro
+# Estructura de la Unidad
 
-# Estructura del curso
+| Bloque | Duración | Tema |
+|---|---:|---|
+| 1 | 1 h 30 min | Evolución y componentes |
+| 2 | 1 h 30 min | Arquitecturas de red |
+| 3 | 1 h 30 min | Capacidad y sobresuscripción |
+| 4 | 1 h 30 min | Estándares y disponibilidad |
+| 5 | 1 h 30 min | Direccionamiento IP y VXLAN |
+| 6 | 2 h 30 min | Caso integrador y evaluación |
 
-| Sesión | Duración  | Tema principal               |
-| ------ | --------- | ---------------------------- |
-| 1      | 1h 45 min | Evolución y componentes      |
-| 2      | 1h 45 min | Arquitecturas de red         |
-| 3      | 1h 45 min | Capacidad y sobresuscripción |
-| 4      | 1h 45 min | Estándares y disponibilidad  |
-| 5      | 1h 45 min | Direccionamiento y VXLAN     |
-| 6      | 1h 15 min | Caso integrador y evaluación |
-
-<v-click>
-
-> Total: 10 horas distribuidas en 6 sesiones.
-
-</v-click>
+> **Total:** 10 horas de trabajo académico.
 
 ---
 
 # Resultados de aprendizaje
 
-Al finalizar el estudiante podrá:
+Al finalizar la unidad, el estudiante podrá:
 
 <v-clicks>
 
-- Explicar la evolución de los centros de datos.
-- Diferenciar cómputo, red, almacenamiento e infraestructura física.
-- Comparar arquitecturas de tres capas y Spine–Leaf.
-- Calcular sobresuscripción y disponibilidad.
-- Distinguir estándares, clasificaciones y certificaciones.
-- Identificar dominios de falla.
-- Diseñar direccionamiento IP escalable.
-- Explicar underlay, overlay, VXLAN, VTEP y EVPN.
+- Explicar la evolución de los centros de datos
+- Diferenciar cómputo, red, almacenamiento e infraestructura física
+- Comparar arquitecturas de tres capas y Spine–Leaf
+- Calcular sobresuscripción y disponibilidad con supuestos explícitos
+- Distinguir estándares, clasificaciones y certificaciones
+- Identificar dominios de falla y fallas de modo común
+- Diseñar un direccionamiento IP escalable
+- Explicar underlay, overlay, VXLAN, VTEP y EVPN
 
 </v-clicks>
 
@@ -75,50 +68,82 @@ Al finalizar el estudiante podrá:
 
 # Metodología de trabajo
 
-- Exposición guiada.
-- Análisis de casos reales.
-- Talleres cuantitativos.
-- Diseño de arquitecturas.
-- Discusión crítica.
-- Evaluación continua.
+<div class="grid grid-cols-2 gap-5 text-left">
 
-<v-click>
+<div class="border rounded-lg p-4">
 
-> Cada sesión incluye: introducción, desarrollo, actividad práctica y cierre.
+### Análisis
 
-</v-click>
+- Exposición guiada
+- Discusión crítica
+- Casos reales
+
+</div>
+
+<div class="border rounded-lg p-4">
+
+### Diseño
+
+- Talleres cuantitativos
+- Diseño de arquitecturas
+- Trabajo colaborativo
+
+</div>
+
+<div class="border rounded-lg p-4">
+
+### Validación
+
+- Actividades prácticas
+- Defensa técnica
+- Retroalimentación
+
+</div>
+
+<div class="border rounded-lg p-4">
+
+### Criterio central
+
+Cada decisión debe justificar sus supuestos, riesgos y *trade-offs*.
+
+</div>
+
+</div>
 
 ---
 
-# Evaluación
+# Evaluación de la unidad
 
-- Corrección técnica: 25%.
-- Justificación arquitectónica y análisis de trade-offs: 20%.
-- Capacidad, escalabilidad y disponibilidad: 15%.
-- Seguridad y segmentación: 15%.
-- Identificación de dominios de falla y plan de pruebas: 10%.
-- Calidad de documentación, diagramas y trazabilidad: 10%.
-- Uso apropiado de automatización, IPAM y observabilidad: 5%.
+<div class="grid grid-cols-2 gap-x-10 text-left text-sm">
+
+<div>
+
+- Corrección técnica: **25%**
+- Justificación arquitectónica: **20%**
+- Capacidad, escalabilidad y disponibilidad: **15%**
+- Seguridad y segmentación: **15%**
+
+</div>
+
+<div>
+
+- Dominios de falla y pruebas: **10%**
+- Documentación y trazabilidad: **10%**
+- Automatización, IPAM y observabilidad: **5%**
+
+</div>
+
+</div>
 
 ---
+layout: section
+---
 
-## layout: section
-
-# Sesión 1
+# Bloque 1
 
 ## Evolución y componentes
 
-### Duración: 1h 45 min
-
----
-
-# Agenda Sesión 1
-
-- Introducción y contexto.
-- Evolución histórica de los centros de datos.
-- Componentes principales.
-- Actividad práctica.
-- Cierre y preguntas.
+### Duración: 1 h 30 min
 
 ---
 
@@ -126,19 +151,17 @@ Al finalizar el estudiante podrá:
 
 ```mermaid
 flowchart LR
-    A[Aplicaciones] --> B[Cómputo]
-    A --> C[Almacenamiento]
-    A --> D[Red]
-    B --> E[Energía]
-    C --> E
-    D --> E
-    E --> F[Refrigeración]
-    F --> G[Operación]
-    G --> H[Seguridad y gestión]
-    H --> A
+  APP[Aplicaciones] --> CMP[Cómputo]
+  APP --> NET[Red]
+  APP --> STO[Almacenamiento]
+  CMP --> PHY[Infraestructura física]
+  NET --> PHY
+  STO --> PHY
+  PHY --> OPS[Operación y seguridad]
+  OPS --> APP
 ```
 
-La calidad del servicio depende de la interacción entre múltiples dominios.
+La calidad del servicio depende de la interacción entre infraestructura, software, personas y procesos.
 
 ---
 
@@ -146,139 +169,128 @@ La calidad del servicio depende de la interacción entre múltiples dominios.
 
 ```mermaid
 timeline
-    title Evolución de los centros de datos
-    1960-1980 : Mainframes y cómputo centralizado
-    1990-2000 : Cliente-servidor y servidores x86
-    2000-2010 : Virtualización y consolidación
-    2010-2020 : Nube, APIs y software-defined infrastructure
-    Actualidad : Híbrido, edge, IA y cargas distribuidas
+  title Evolución de los centros de datos
+  1960-1980 : Computación centralizada y mainframes
+  1990-2000 : Cliente-servidor, Ethernet y x86
+  2000-2010 : Virtualización y consolidación
+  2010-2020 : Nube, APIs y automatización
+  Actualidad : Híbrido, edge, IA y cargas distribuidas
 ```
+
+> Las etapas son un modelo didáctico: se superponen y no representan fronteras absolutas.
 
 ---
 
 # De la centralización a la nube
 
-| Etapa            | Característica principal            | Reto dominante                   |
-| ---------------- | ----------------------------------- | -------------------------------- |
-| Mainframe        | Escalabilidad vertical              | Alto costo y dependencia central |
-| Cliente-servidor | Distribución de aplicaciones        | Server sprawl                    |
-| Virtualización   | Consolidación de recursos           | Sobreconsolidación               |
-| Nube             | Aprovisionamiento mediante software | Gobierno y dependencia           |
-| Híbrido/edge/IA  | Cargas distribuidas                 | Latencia, energía y operación    |
+| Etapa | Aporte principal | Reto frecuente |
+|---|---|---|
+| Mainframe | Cómputo centralizado | Costo y dependencia del sistema central |
+| Cliente-servidor | Distribución de aplicaciones | Proliferación de servidores |
+| Virtualización | Consolidación y movilidad | Sobreconsolidación y operación |
+| Nube | Aprovisionamiento por software | Gobierno y dependencia de servicios |
+| Híbrido / edge / IA | Cargas distribuidas | Latencia, energía y complejidad |
 
 ---
 
-# Componentes principales
+# Componentes del centro de datos
 
-<div class="grid grid-cols-2 gap-6">
+<div class="grid grid-cols-2 gap-4 text-left text-sm">
 
-<div class="border rounded-lg p-4">
-<h3> Cómputo</h3>
+<div class="border rounded-lg p-3">
 
-- Rack.
-- Blade.
-- Hiperconvergencia.
-- GPU, DPU y aceleradores.
+### Cómputo
+
+Servidores rack, blade, hiperconvergencia, GPU, DPU y aceleradores.
+
 </div>
 
-<div class="border rounded-lg p-4">
-<h3> Red</h3>
+<div class="border rounded-lg p-3">
 
-- Leaf y spine.
-- Firewalls.
-- Balanceadores.
-- WAN e Internet.
+### Red
+
+Leaf, spine, firewalls, balanceadores, WAN, Internet y gestión fuera de banda.
+
 </div>
 
-<div class="border rounded-lg p-4">
-<h3> Almacenamiento</h3>
+<div class="border rounded-lg p-3">
 
-- SAN.
-- NAS.
-- Object storage.
-- NVMe over Fabrics.
+### Almacenamiento
+
+SAN, NAS, object storage, iSCSI, Fibre Channel y NVMe over Fabrics.
+
 </div>
 
-<div class="border rounded-lg p-4">
-<h3> Infraestructura</h3>
+<div class="border rounded-lg p-3">
 
-- Energía.
-- Refrigeración.
-- Racks.
-- Cableado y seguridad física.
+### Infraestructura física
+
+Energía, UPS, generadores, refrigeración, racks, cableado y seguridad física.
+
 </div>
 
 </div>
 
 ---
 
-# Actividad práctica 1
+# Actividad 1
 
-## Análisis de un centro de datos real
+## Análisis de un centro de datos
 
-En grupos de 3–4 personas:
+En equipos de 3 o 4 personas:
 
-1. Describan un centro de datos conocido.
-2. Identifiquen cómputo, red, almacenamiento e infraestructura.
-3. Clasifiquen la etapa evolutiva predominante.
-4. Identifiquen dos riesgos operativos.
+1. Seleccionen un centro de datos real o una instalación conocida.
+2. Identifiquen cómputo, red, almacenamiento e infraestructura física.
+3. Determinen la etapa evolutiva predominante.
+4. Identifiquen dos riesgos operativos y una oportunidad de mejora.
 
-**Duración:** 20 minutos.
+<div class="mt-6 text-sm opacity-75">
+Tiempo sugerido: 25 minutos.
+</div>
 
 ---
 
-# Cierre Sesión 1
+# Cierre del bloque 1
 
 - El centro de datos es un sistema de sistemas.
 - La evolución responde a capacidad, disponibilidad, flexibilidad y costo.
-- Los componentes deben diseñarse de forma integrada.
+- La infraestructura física y lógica debe diseñarse de forma integrada.
 
-**Pregunta de reflexión:**
-¿Qué condiciones justificarían mantener una carga en una instalación propia en lugar de migrarla a nube pública?
+> **Pregunta:** ¿Qué condiciones justificarían mantener una carga en una instalación propia en vez de migrarla a nube pública?
 
 ---
+layout: section
+---
 
-## layout: section
-
-# Sesión 2
+# Bloque 2
 
 ## Arquitecturas de red
 
-### Duración: 1h 45 min
+### Duración: 1 h 30 min
 
 ---
 
-# Agenda Sesión 2
-
-- Arquitectura jerárquica de tres capas.
-- Arquitectura Spine–Leaf.
-- Underlay y overlay.
-- Actividad práctica.
-- Cierre.
-
----
-
-# Arquitectura jerárquica de tres capas
+# Arquitectura de tres capas
 
 ```mermaid
 flowchart TB
-    A[Core] --> B[Distribution 1]
-    A --> C[Distribution 2]
-    B --> D[Access 1]
-    B --> E[Access 2]
-    C --> F[Access 3]
-    C --> G[Access 4]
-    D --> H[Servidores]
-    E --> H
-    F --> H
-    G --> H
+  CORE[Core] --> D1[Distribution 1]
+  CORE --> D2[Distribution 2]
+  D1 --> A1[Access 1]
+  D1 --> A2[Access 2]
+  D2 --> A3[Access 3]
+  D2 --> A4[Access 4]
+  A1 --> S1[Servidores]
+  A2 --> S2[Servidores]
+  A3 --> S3[Servidores]
+  A4 --> S4[Servidores]
 ```
 
-## Capas
-
-- **Acceso:** conexión de equipos finales.
-- **Distribución:** agregación, políticas y routing.
-- **Núcleo:** conectividad de alta capacidad.
+<div class="grid grid-cols-3 gap-4 mt-4 text-sm text-left">
+<div><b>Acceso</b><br>Conecta equipos finales.</div>
+<div><b>Distribución</b><br>Agregación, políticas y routing.</div>
+<div><b>Núcleo</b><br>Conectividad de alta capacidad.</div>
+</div>
 
 ---
 
@@ -286,52 +298,64 @@ flowchart TB
 
 ```mermaid
 flowchart TB
-    S1[Spine 1]
-    S2[Spine 2]
-    S3[Spine 3]
-
-    L1[Leaf 1]
-    L2[Leaf 2]
-    L3[Leaf 3]
-    L4[Leaf 4]
-
-    S1 --- L1
-    S1 --- L2
-    S1 --- L3
-    S1 --- L4
-    S2 --- L1
-    S2 --- L2
-    S2 --- L3
-    S2 --- L4
-    S3 --- L1
-    S3 --- L2
-    S3 --- L3
-    S3 --- L4
+  S1[Spine 1] --- L1[Leaf 1]
+  S1 --- L2[Leaf 2]
+  S1 --- L3[Leaf 3]
+  S2[Spine 2] --- L1
+  S2 --- L2
+  S2 --- L3
+  S3[Spine 3] --- L1
+  S3 --- L2
+  S3 --- L3
+  L1 --> R1[Rack A]
+  L2 --> R2[Rack B]
+  L3 --> R3[Rack C]
 ```
 
-Cada leaf se conecta con cada spine.
-
-<v-clicks>
-
-- Caminos predecibles.
-- ECMP en capa 3.
-- Escalamiento horizontal.
-- Mejor adaptación al tráfico East–West.
-
-</v-clicks>
+Cada leaf se conecta con cada spine en el fabric básico.
 
 ---
 
-# Comparación de arquitecturas
+# Qué aporta Spine–Leaf
 
-| Criterio      | Tres capas                    | Spine–Leaf                           |
-| ------------- | ----------------------------- | ------------------------------------ |
-| Modelo        | Acceso, distribución y núcleo | Leaf y spine                         |
-| Tráfico ideal | North–South                   | East–West                            |
-| Multipath     | Depende del diseño            | ECMP nativo en el underlay           |
-| Escalabilidad | Vertical y jerárquica         | Horizontal                           |
-| Latencia      | Puede variar por capa         | Saltos más predecibles               |
-| Operación     | Familiar en redes heredadas   | Requiere automatización y routing IP |
+<div class="grid grid-cols-2 gap-5 text-left">
+
+<div class="border rounded-lg p-4">
+
+### Data plane
+
+- Múltiples rutas mediante ECMP
+- Caminos con número de saltos predecible
+- Mejor adaptación a tráfico East–West
+
+</div>
+
+<div class="border rounded-lg p-4">
+
+### Operación
+
+- Underlay IP en capa 3
+- Escalamiento horizontal condicionado por capacidad
+- Menor dependencia de STP en el underlay
+
+</div>
+
+</div>
+
+> No garantiza por sí mismo una red no bloqueante ni latencia constante.
+
+---
+
+# Tres capas y Spine–Leaf
+
+| Criterio | Tres capas | Spine–Leaf |
+|---|---|---|
+| Modelo | Acceso, distribución, núcleo | Leaf y spine |
+| Tráfico frecuente | North–South | East–West |
+| Multipath | Depende del diseño | ECMP en underlay L3 |
+| Escalabilidad | Jerárquica | Horizontal |
+| Latencia | Puede variar | Saltos más predecibles |
+| Uso común | Campus y redes heredadas | Fabrics de data center |
 
 ---
 
@@ -339,75 +363,58 @@ Cada leaf se conecta con cada spine.
 
 ```mermaid
 flowchart LR
-    A[Servidor] --> B[VTEP Leaf]
-    B --> C[Underlay IP]
-    C --> D[VTEP Leaf remoto]
-    D --> E[Servidor remoto]
-
-    F[Overlay VXLAN] -. encapsula .-> B
-    F -. transporta .-> D
+  H1[Host A] --> L1[VTEP Leaf A]
+  L1 -->|IP / ECMP| SP[Spine]
+  SP --> L2[VTEP Leaf B]
+  L2 --> H2[Host B]
+  L1 -. VXLAN .-> L2
 ```
 
-## Underlay
-
-Red IP física que conecta los dispositivos de red.
-
-## Overlay
-
-Red lógica construida sobre el underlay.
-
-## VTEP
-
-Punto que encapsula y desencapsula tráfico VXLAN.
+| Plano | Función |
+|---|---|
+| Underlay | Red IP física entre dispositivos y VTEPs |
+| Overlay | Red lógica independiente de la topología física |
+| VTEP | Encapsula y desencapsula tráfico VXLAN |
+| EVPN | Plano de control frecuentemente basado en MP-BGP |
 
 ---
 
-# Actividad práctica 2
+# Actividad 2
 
-## Diseño comparativo 3-tier vs Spine–Leaf
+## Comparación de arquitecturas
 
 En grupos:
 
 1. Diseñen una arquitectura de tres capas para 100 servidores.
-2. Diseñen un fabric Spine–Leaf para 100 servidores.
-3. Comparen saltos, capacidad y operación.
-4. Identifiquen dos dominios de falla en cada diseño.
+2. Diseñen un fabric Spine–Leaf para los mismos 100 servidores.
+3. Comparen trayectorias, capacidad, escalabilidad y operación.
+4. Identifiquen dos dominios de falla en cada alternativa.
 
-**Duración:** 25 minutos.
-
----
-
-# Cierre Sesión 2
-
-- Spine–Leaf favorece escalabilidad y tráfico East–West.
-- Underlay y overlay separan planos físico y lógico.
-- La arquitectura debe responder al perfil de tráfico.
+<div class="mt-5 text-sm opacity-75">Tiempo sugerido: 30 minutos.</div>
 
 ---
 
-## layout: section
+# Cierre del bloque 2
 
-# Sesión 3
+- La arquitectura debe responder al perfil de tráfico y al crecimiento esperado.
+- Spine–Leaf favorece rutas ECMP y tráfico East–West.
+- Underlay y overlay separan conectividad física y segmentación lógica.
+
+---
+layout: section
+---
+
+# Bloque 3
 
 ## Capacidad y sobresuscripción
 
-### Duración: 1h 45 min
+### Duración: 1 h 30 min
 
 ---
 
-# Agenda Sesión 3
+# Capacidad de un leaf
 
-- Cálculo de capacidad.
-- Sobresuscripción.
-- Ejercicios cuantitativos.
-- Actividad práctica.
-- Cierre.
-
----
-
-# Cálculo de capacidad
-
-## Ejemplo
+## Escenario ilustrativo
 
 Un leaf tiene:
 
@@ -428,7 +435,7 @@ $$
 
 ---
 
-# Sobresuscripción
+# Cálculo de sobresuscripción
 
 $$
 \text{Sobresuscripción}
@@ -443,417 +450,465 @@ $$
 = 2.75:1
 $$
 
-La relación aceptable depende del perfil de tráfico, los picos, la criticidad y los SLA.
+
+> La relación aceptable depende de tráfico, picos, criticidad, QoS, SLA y patrón de aplicaciones.
 
 ---
 
 # Taller cuantitativo
 
-## Ejercicio 1
+<div class="grid grid-cols-2 gap-6 text-left">
 
-Calcule la sobresuscripción de un leaf con:
+<div class="border rounded-lg p-4">
 
-- 32 puertos de 25 Gb/s.
-- 4 uplinks de 100 Gb/s.
+### Ejercicio 1
 
-## Ejercicio 2
-
-Un leaf tiene:
-
-- 48 puertos de 10 Gb/s.
-- 4 uplinks de 40 Gb/s.
+- 32 puertos de 25 Gb/s
+- 4 uplinks de 100 Gb/s
 
 Calcule la sobresuscripción.
 
-**Duración:** 15 minutos.
+</div>
+
+<div class="border rounded-lg p-4">
+
+### Ejercicio 2
+
+- 48 puertos de 10 Gb/s
+- 4 uplinks de 40 Gb/s
+
+Calcule la sobresuscripción.
+
+</div>
+
+</div>
+
+<div class="mt-6 text-sm opacity-75">Tiempo sugerido: 20 minutos.</div>
 
 ---
 
-# Actividad práctica 3
+# Actividad 3
 
-## Escenarios de capacidad
+## Diseño de capacidad
 
-En grupos:
+En grupos, propongan un diseño para 200 servidores de 25 Gb/s con conectividad dual-homed:
 
-1. Diseñen un leaf para 200 servidores de 25 Gb/s dual-homed.
-2. Propongan número de spines y enlaces.
-3. Calculen sobresuscripción.
-4. Determinen crecimiento máximo sin modificar spines.
+- Número de leafs, spines y enlaces.
+- Capacidad hacia servidores y uplinks por leaf.
+- Sobresuscripción esperada.
+- Crecimiento máximo sin ampliar spines.
+- Supuestos necesarios para evaluar tolerancia a fallas.
 
-**Duración:** 30 minutos.
-
----
-
-# Cierre Sesión 3
-
-- La sobresuscripción debe calcularse con capacidad, no solo con número de puertos.
-- El resultado aceptable depende del tráfico y la criticidad.
-- El diseño debe explicitar supuestos y márgenes de crecimiento.
+<div class="mt-5 text-sm opacity-75">Tiempo sugerido: 30 minutos.</div>
 
 ---
 
-## layout: section
+# Cierre del bloque 3
 
-# Sesión 4
+- La sobresuscripción se calcula con capacidad, no solo con puertos.
+- El cálculo debe incluir velocidad, redundancia y patrón de tráfico.
+- Todo diseño debe indicar sus supuestos y margen de crecimiento.
+
+---
+layout: section
+---
+
+# Bloque 4
 
 ## Estándares y disponibilidad
 
-### Duración: 1h 45 min
+### Duración: 1 h 30 min
 
 ---
 
-# Agenda Sesión 4
+# Conceptos que no deben confundirse
 
-- Estándares, clasificaciones y certificaciones.
-- Uptime Institute Tier Standard.
-- ANSI/TIA-942-C.
-- Disponibilidad y modelos de redundancia.
-- Actividad práctica.
-- Cierre.
+| Concepto | Naturaleza | Finalidad |
+|---|---|---|
+| ANSI/TIA-942 | Estándar técnico | Infraestructura de data center |
+| TIA-942 Rating | Clasificación | Niveles de infraestructura |
+| Certificación TIA-942 | Evaluación | Conformidad frente a requisitos |
+| Uptime Tier | Clasificación propietaria | Topología y resiliencia esperada |
+| ISO/IEC 27001 | Sistema de gestión | Seguridad de información |
+| ITIL | Marco de prácticas | Gestión de servicios TI |
 
----
-
-# Estándares y clasificaciones
-
-| Concepto              | Naturaleza                | Propósito                       |
-| --------------------- | ------------------------- | ------------------------------- |
-| ANSI/TIA-942          | Estándar técnico          | Requisitos de infraestructura   |
-| TIA-942 Rating        | Clasificación             | Niveles de infraestructura      |
-| Certificación TIA-942 | Evaluación                | Verificar conformidad           |
-| Uptime Tier           | Clasificación propietaria | Topología y tolerancia a fallas |
-| ISO/IEC 27001         | Sistema de gestión        | Seguridad de la información     |
-| ITIL                  | Marco de prácticas        | Gestión de servicios TI         |
-
-No debe asumirse equivalencia automática entre Rating TIA-942 y Tier de Uptime Institute.
+> Los Ratings TIA-942 y los Tiers Uptime no son equivalentes automáticamente.
 
 ---
 
 # Uptime Institute Tier Standard
 
-| Tier     | Descripción general                         |
-| -------- | ------------------------------------------- |
-| Tier I   | Infraestructura básica                      |
-| Tier II  | Componentes redundantes                     |
+| Tier | Descripción general |
+|---|---|
+| Tier I | Infraestructura básica |
+| Tier II | Componentes redundantes |
 | Tier III | Infraestructura mantenible concurrentemente |
-| Tier IV  | Infraestructura tolerante a fallas          |
+| Tier IV | Infraestructura tolerante a fallas |
 
-Un Tier no es garantía de disponibilidad de extremo a extremo.
+Un Tier no es una garantía de disponibilidad de extremo a extremo para una aplicación.
 
 ---
 
-# Disponibilidad
+# Disponibilidad: modelo simplificado
 
-La disponibilidad simplificada de un componente reparable es:
+\[
+A=\frac{MTBF}{MTBF+MTTR}
+\]
 
-$$
-A = \frac{MTBF}{MTBF + MTTR}
-$$
+Con MTBF = 8.760 horas y MTTR = 4 horas:
 
-## Ejemplo
+\[
+A=\frac{8760}{8760+4}=0.999543
+\]
 
-Con:
+**Disponibilidad aproximada: 99,9543%.**
 
-- MTBF = 8.760 horas.
-- MTTR = 4 horas.
-
-$$
-A = \frac{8760}{8760 + 4}
-= 0.999543
-$$
-
-Disponibilidad aproximada: **99,9543%**.
+> El modelo no representa fallas comunes, dependencias, mantenimiento, software o errores humanos.
 
 ---
 
 # Modelos de redundancia
 
-| Modelo | Descripción                                     |
-| ------ | ----------------------------------------------- |
-| N      | Capacidad mínima requerida                      |
-| N+1    | Capacidad mínima más una unidad adicional       |
-| 2N     | Dos sistemas independientes con capacidad total |
-| 2N+1   | Dos sistemas completos más capacidad adicional  |
+| Modelo | Significado |
+|---|---|
+| N | Capacidad mínima para la carga |
+| N+1 | Capacidad requerida más una unidad adicional |
+| 2N | Dos rutas independientes, cada una con capacidad total |
+| 2N+1 | Dos rutas completas más una unidad adicional |
 
-La selección depende de impacto al negocio, costo, mantenimiento, operación y riesgo residual.
+La decisión depende del impacto al negocio, costo, mantenimiento, eficiencia y riesgo residual.
+
+---
+
+# Ejemplo de N+1
+
+Una carga de **300 kW** se soporta con cuatro UPS de **100 kW**:
+
+<div class="grid grid-cols-2 gap-6 text-left">
+
+<div>
+
+### Operación normal
+
+- 4 UPS activos
+- 75 kW por UPS
+- Carga total: 300 kW
+
+</div>
+
+<div>
+
+### Falla de un UPS
+
+- 3 UPS restantes
+- 100 kW por UPS
+- Carga total soportada: 300 kW
+
+</div>
+
+</div>
+
+Este es un ejemplo de capacidad **N+1**.
 
 ---
 
 # Dominios de falla
 
-## Físicos
+<div class="grid grid-cols-2 gap-4 text-left text-sm">
 
-Rack, fila, sala, edificio o zona geográfica.
+<div class="border rounded-lg p-3"><b>Físicos</b><br>Rack, fila, sala, edificio, región.</div>
+<div class="border rounded-lg p-3"><b>Eléctricos y mecánicos</b><br>PDU, UPS, circuito, generador, chiller.</div>
+<div class="border rounded-lg p-3"><b>Lógicos</b><br>Switch, VTEP, DNS, controlador, clúster, VLAN/VNI.</div>
+<div class="border rounded-lg p-3"><b>Operativos</b><br>Cambios, credenciales, automatización, software y error humano.</div>
 
-## Eléctricos y mecánicos
+</div>
 
-PDU, UPS, generador, circuito, chiller o unidad CRAH/CRAC.
-
-## Lógicos
-
-Switch, VTEP, VLAN/VNI, controlador, clúster o DNS.
-
-## Operativos
-
-Procedimientos, credenciales, automatización, software o error humano.
-
-<v-click>
-
-La redundancia no elimina los fallos de modo común.
-
-</v-click>
+> La redundancia reduce fallas individuales, pero no elimina fallas de modo común.
 
 ---
 
 # RTO y RPO
 
+<div class="grid grid-cols-2 gap-6 text-left">
+
+<div class="border rounded-lg p-5">
+
 ## RTO
 
-Tiempo máximo objetivo para restaurar un servicio.
+Tiempo máximo **objetivo** para restaurar un servicio tras una interrupción.
+
+</div>
+
+<div class="border rounded-lg p-5">
 
 ## RPO
 
-Máxima pérdida de datos aceptable expresada como tiempo.
+Máxima pérdida de datos **aceptable**, expresada como tiempo.
 
-```mermaid
-timeline
-    title Ejemplo de recuperación
-    section Interrupción
-      Fallo : 0
-      Recuperación del servicio : RTO
-      Punto máximo de datos perdidos : RPO
-```
+</div>
 
-Estos objetivos deben originarse en un **Análisis de Impacto al Negocio**, no en una tabla genérica.
+</div>
 
----
+<div class="mt-6 text-left">
 
-# Actividad práctica 4
+Estos objetivos deben derivarse de un **Análisis de Impacto al Negocio (BIA)**; no de valores genéricos por tipo de aplicación.
 
-## Análisis crítico de TIA-942, Tier, N+1, 2N, RTO y RPO
-
-En grupos:
-
-1. Comparen un centro de datos Tier III y un Rated-3.
-2. Analicen N+1 vs 2N para una carga crítica.
-3. Propongan RTO y RPO para:
-   - Pagos o transacciones críticas.
-   - ERP corporativo.
-   - Portal interno.
-   - Archivo histórico.
-
-**Duración:** 30 minutos.
+</div>
 
 ---
 
-# Cierre Sesión 4
+# Actividad 4
 
-- Estándares, clasificaciones y certificaciones no son equivalentes.
-- La disponibilidad depende de infraestructura, operación y software.
-- RTO y RPO deben derivarse del impacto al negocio.
+## Análisis de resiliencia
 
----
+En equipos:
 
-## layout: section
+1. Diferencien Tier III, Rated-3 y una certificación.
+2. Comparen N+1 y 2N para una carga crítica.
+3. Propongan RTO y RPO para pagos, ERP, portal interno y archivo histórico.
+4. Justifiquen las decisiones con impacto, costo y riesgo.
 
-# Sesión 5
-
-## Direccionamiento y VXLAN
-
-### Duración: 1h 45 min
+<div class="mt-5 text-sm opacity-75">Tiempo sugerido: 30 minutos.</div>
 
 ---
 
-# Agenda Sesión 5
+# Cierre del bloque 4
 
-- Principios de diseño de direccionamiento IP.
-- Convenciones de host.
-- VXLAN y direccionamiento.
-- Actividad práctica.
-- Cierre.
+- Un estándar, una clasificación y una certificación no son equivalentes.
+- La disponibilidad depende de componentes técnicos y procesos operativos.
+- RTO y RPO deben responder al impacto de negocio.
+
+---
+layout: section
+---
+
+# Bloque 5
+
+## Direccionamiento IP y VXLAN
+
+### Duración: 1 h 30 min
 
 ---
 
-# Principios de direccionamiento IP
-
-Un plan de direccionamiento para un centro de datos debe facilitar:
+# Principios de direccionamiento
 
 <v-clicks>
 
-- Agregación de rutas y escalabilidad.
-- Separación por función, entorno, tenant, dominio de seguridad o zona.
-- Identificación operativa sin depender de convenciones frágiles.
-- Integración con DNS, DHCP, IPAM, automatización y monitoreo.
-- Crecimiento planificado y control de solapamientos.
-- Soporte para IPv4 e IPv6 cuando aplique.
+- Agregación de rutas y escalabilidad
+- Separación por función, entorno, tenant o zona de seguridad
+- Integración con DNS, DHCP, IPAM, automatización y monitoreo
+- Crecimiento planificado y prevención de solapamientos
+- Soporte IPv4 e IPv6 cuando sea aplicable
+- Trazabilidad mediante una fuente de verdad gobernada
 
 </v-clicks>
 
-La fuente de verdad debe ser un sistema IPAM o CMDB bien gobernado.
+> Un sistema IPAM o CMDB debe registrar prefijos, VLAN/VNI, dispositivos, interfaces y asignaciones.
 
 ---
 
-# Convenciones de host
+# Convenciones de host IPv4
 
-Para una red IPv4 `/24` podría utilizarse:
+## Ejemplo para una red `/24`
 
-| Rango       | Uso convencional posible                      |
-| ----------- | --------------------------------------------- |
-| `.1`        | Gateway virtual o interfaz de gateway         |
-| `.2–.9`     | Infraestructura de red o servicios reservados |
-| `.10–.49`   | Servidores de aplicación                      |
-| `.50–.99`   | Rango DHCP o asignaciones dinámicas           |
-| `.100–.109` | Direcciones virtuales de servicios            |
-| `.110–.200` | Hosts estáticos o reservas documentadas       |
+| Rango | Uso convencional posible |
+|---|---|
+| `.1` | Gateway virtual o interfaz de gateway |
+| `.2–.9` | Infraestructura o servicios reservados |
+| `.10–.49` | Servidores de aplicación |
+| `.50–.99` | DHCP o asignaciones dinámicas |
+| `.100–.109` | Direcciones virtuales de servicios |
+| `.110–.200` | Hosts estáticos o reservas |
 
-La dirección de broadcast depende de la máscara o prefijo.
-
----
-
-# VXLAN y direccionamiento
-
-VXLAN permite transportar segmentos virtuales sobre una red IP. El encabezado VXLAN contiene un identificador VNI de 24 bits, que permite aproximadamente 16 millones de identificadores de red virtual.
-
-El underlay utiliza direcciones IP enrutable entre VTEPs. El overlay proporciona segmentación lógica y movilidad de cargas, pero sigue dependiendo de MTU suficiente, conectividad IP del underlay, control plane, seguridad, observabilidad y diseño de capacidad.
+> La dirección de broadcast depende del prefijo; no se determina solo por el último octeto.
 
 ---
 
-# Actividad práctica 5
+# VXLAN, VNI y VTEP
 
-## Diseño de IPAM, underlay/overlay y segmentación
+```mermaid
+flowchart LR
+  H1[Host en VNI 10010] --> V1[VTEP Leaf A]
+  V1 -->|UDP/VXLAN sobre IP| V2[VTEP Leaf B]
+  V2 --> H2[Host en VNI 10010]
+```
+
+- VXLAN encapsula tráfico de segmentos lógicos sobre una red IP.
+- El VNI tiene 24 bits: permite aproximadamente 16 millones de identificadores.
+- EVPN puede proporcionar el plano de control para MAC, IP, VTEP y segmentos.
+
+---
+
+# Requisitos operativos del overlay
+
+<div class="grid grid-cols-2 gap-5 text-left text-sm">
+
+<div>
+
+### Underlay
+
+- Conectividad IP entre VTEPs
+- ECMP y convergencia
+- MTU suficiente para encapsulación
+- Observabilidad de rutas y enlaces
+
+</div>
+
+<div>
+
+### Overlay
+
+- Segmentación mediante VNI
+- Control plane EVPN cuando aplique
+- Políticas de seguridad distribuidas
+- Trazabilidad de MAC, IP y endpoints
+
+</div>
+
+</div>
+
+---
+
+# Actividad 5
+
+## Plan IP e integración overlay
 
 En grupos:
 
-1. Diseñen un esquema de prefijos IPv4 e IPv6 para:
-   - Underlay.
-   - Loopbacks.
-   - Segmentos de servicios.
-2. Propongan rangos para:
-   - Gestión.
-   - Web.
-   - Aplicación.
-   - Base de datos.
-   - Respaldo.
-   - Almacenamiento.
-3. Identifiquen dos riesgos de solapamiento.
+1. Propongan prefijos IPv4 e IPv6 para underlay, loopbacks y segmentos de servicio.
+2. Definan rangos para gestión, web, aplicación, base de datos, respaldo y almacenamiento.
+3. Identifiquen dos riesgos de solapamiento y cómo prevenirlos.
+4. Expliquen qué datos deben mantenerse en IPAM.
 
-**Duración:** 30 minutos.
+<div class="mt-5 text-sm opacity-75">Tiempo sugerido: 30 minutos.</div>
 
 ---
 
-# Cierre Sesión 5
+# Cierre del bloque 5
 
 - El direccionamiento debe facilitar agregación, operación y crecimiento.
-- VXLAN permite segmentación y movilidad lógica.
-- IPAM, automatización y observabilidad son componentes operativos.
+- VXLAN aporta encapsulación y EVPN puede aportar control plane.
+- IPAM, automatización y observabilidad son requisitos operativos.
 
 ---
+layout: section
+---
 
-## layout: section
-
-# Sesión 6
+# Bloque 6
 
 ## Caso integrador y evaluación
 
-### Duración: 1h 15 min
+### Duración: 2 h 30 min
 
 ---
 
-# Agenda Sesión 6
+# Caso integrador
 
-- Presentación del caso integrador.
-- Trabajo en equipos.
-- Defensa técnica.
-- Evaluación y cierre del curso.
+## Diseño de un fabric inicial
+
+Una organización requiere conectar **200 servidores dual-homed**.
+
+<div class="grid grid-cols-2 gap-5 text-left text-sm mt-4">
+
+<div class="border rounded-lg p-4">
+
+### Requisitos
+
+- Dos interfaces de 25 Gb/s por servidor
+- Crecimiento del 30%
+- Tolerancia a falla de un enlace Leaf–Spine
+- Sobresuscripción máxima objetivo de 3:1
+
+</div>
+
+<div class="border rounded-lg p-4">
+
+### Recursos
+
+- Leaf: 48 × 25 Gb/s y 8 × 100 Gb/s
+- Spine: 32 × 100 Gb/s
+- Underlay: eBGP u OSPF
+- Segmentos: gestión, web, app, BD, backup y storage
+
+</div>
+
+</div>
 
 ---
 
-# Caso integrador: diseño de un fabric inicial
+# Tareas de diseño I
 
-## Requerimiento
-
-Una organización necesita conectar **200 servidores dual-homed**.
-
-Cada servidor requiere:
-
-- 2 interfaces de 25 Gb/s.
-- Crecimiento del 30%.
-- Tolerancia a la falla de un enlace Leaf–Spine.
-- Sobresuscripción objetivo máxima de 3:1.
-
-## Recursos disponibles
-
-- Leafs: 48 × 25 Gb/s y 8 × 100 Gb/s.
-- Spines: 32 × 100 Gb/s.
-- Underlay: eBGP u OSPF.
-- Segmentos: gestión, web, aplicación, base de datos, respaldo y almacenamiento.
-
----
-
-# Tareas de diseño
-
-1. Diseñar el número de leafs, spines y enlaces requeridos.
-2. Calcular la capacidad de servidor y uplink por leaf.
+1. Definir el número de leafs, spines y enlaces necesarios.
+2. Calcular capacidad hacia servidores y uplinks por leaf.
 3. Calcular la sobresuscripción por leaf.
-4. Determinar la capacidad máxima de crecimiento sin modificar el número de spines.
-5. Proponer un esquema de prefijos IPv4 e IPv6 para underlay, loopbacks y segmentos de servicios.
-6. Identificar dominios de falla físicos, eléctricos, de red y operativos.
-7. Justificar si se requiere EVPN multihoming, MLAG o un modelo de conectividad alternativo.
-8. Definir métricas de observabilidad: pérdida, latencia, utilización, errores, convergencia, disponibilidad y estado de BGP.
+4. Determinar el crecimiento posible sin modificar el número de spines.
+
+> Expliciten supuestos de puertos, velocidades, dual-homing y reserva de capacidad.
+
+---
+
+# Tareas de diseño II
+
+5. Proponer prefijos IPv4 e IPv6 para underlay, loopbacks y servicios.
+6. Identificar dominios de falla físicos, eléctricos, lógicos y operativos.
+7. Justificar EVPN multihoming, MLAG u otra opción de conectividad.
+8. Definir métricas: pérdida, latencia, utilización, errores, convergencia, BGP y disponibilidad.
 
 ---
 
 # Entregables
 
-- Diagrama lógico y físico.
-- Tabla de puertos y capacidad.
-- Plan IP documentado.
-- Matriz de dominios de falla.
-- Justificación arquitectónica de máximo 1.500 palabras.
-- Plan de pruebas de falla y recuperación.
+<div class="grid grid-cols-2 gap-x-10 text-left text-sm">
 
-**Duración del trabajo en clase:** 30 minutos.
+<div>
 
----
+- Diagrama lógico y físico
+- Tabla de puertos y capacidad
+- Plan IP documentado
 
-# Defensa técnica
+</div>
 
-Cada grupo presenta:
+<div>
 
-- Arquitectura propuesta.
-- Cálculos de capacidad y sobresuscripción.
-- Plan IP.
-- Dominios de falla.
-- Justificación de decisiones.
+- Matriz de dominios de falla
+- Justificación arquitectónica: máximo 1.500 palabras
+- Plan de pruebas de falla y recuperación
 
-**Duración por grupo:** 5–7 minutos.
+</div>
 
----
+</div>
 
-# Evaluación del curso
-
-- Corrección técnica: 25%.
-- Justificación arquitectónica y análisis de trade-offs: 20%.
-- Capacidad, escalabilidad y disponibilidad: 15%.
-- Seguridad y segmentación: 15%.
-- Identificación de dominios de falla y plan de pruebas: 10%.
-- Calidad de documentación, diagramas y trazabilidad: 10%.
-- Uso apropiado de automatización, IPAM y observabilidad: 5%.
+<div class="mt-6 text-sm opacity-75">
+Trabajo en clase: 60 minutos. Defensa técnica: 10–12 minutos por grupo.
+</div>
 
 ---
 
-# Cierre del curso
+# Rúbrica de evaluación
 
-## Ideas clave
+| Dimensión | Peso |
+|---|---:|
+| Corrección técnica | 25% |
+| Justificación y trade-offs | 20% |
+| Capacidad, escalabilidad y disponibilidad | 15% |
+| Seguridad y segmentación | 15% |
+| Dominios de falla y pruebas | 10% |
+| Documentación y trazabilidad | 10% |
+| Automatización, IPAM y observabilidad | 5% |
+
+---
+
+# Ideas clave
 
 <v-clicks>
 
-- Un centro de datos es un sistema de sistemas.
-- La arquitectura debe responder al perfil de tráfico y al negocio.
-- Spine–Leaf favorece escalabilidad y tráfico East–West.
-- VXLAN proporciona encapsulamiento; EVPN aporta control.
-- Redundancia no equivale automáticamente a disponibilidad.
-- IPAM, automatización y observabilidad son componentes operativos.
-- Toda decisión debe explicitar supuestos, riesgos y trade-offs.
+- Un centro de datos es un sistema de sistemas
+- La arquitectura responde a tráfico, negocio y operación
+- Spine–Leaf favorece ECMP y tráfico East–West
+- VXLAN encapsula; EVPN puede controlar el overlay
+- Redundancia no equivale automáticamente a disponibilidad
+- IPAM, automatización y observabilidad son capacidades operativas
+- Las decisiones deben declarar supuestos, riesgos y trade-offs
 
 </v-clicks>
 
@@ -861,31 +916,33 @@ Cada grupo presenta:
 
 # Referencias recomendadas
 
-- Uptime Institute — _Tier Standard: Topology_.
-- ANSI/TIA-942-C — _Telecommunications Infrastructure Standard for Data Centers_.
-- IETF RFC 7348 — VXLAN.
-- IETF RFC 7432 — BGP Ethernet VPN.
-- ISO/IEC 22237 — Data centre facilities and infrastructures.
-- ISO/IEC 27001 — Information security management systems.
-- IETF RFC 1918 — Private IPv4 addresses.
-- IETF RFC 4193 — Unique Local IPv6 Unicast Addresses.
-- Guías de diseño Cisco VXLAN BGP EVPN.
-- Publicaciones técnicas de Uptime Institute.
+<div class="text-left text-sm leading-6">
+
+- Uptime Institute — *Tier Standard: Topology*
+- ANSI/TIA-942-C — *Telecommunications Infrastructure Standard for Data Centers*
+- IETF RFC 7348 — *Virtual eXtensible Local Area Network (VXLAN)*
+- IETF RFC 7432 — *BGP MPLS-Based Ethernet VPN*
+- ISO/IEC 22237 — *Data centre facilities and infrastructures*
+- ISO/IEC 27001 — *Information security management systems*
+- IETF RFC 1918 — *Address Allocation for Private Internets*
+- IETF RFC 4193 — *Unique Local IPv6 Unicast Addresses*
+
+</div>
 
 ---
+layout: end
+---
 
-# Preguntas finales
-
-## Discusión
+# Pregunta de discusión
 
 ¿Qué arquitectura propondría para una organización con:
 
-- Tráfico East–West predominante.
-- Crecimiento esperado del 50%.
-- Requisito de disponibilidad crítica.
-- Presupuesto limitado.
-- Equipo operativo pequeño?
+- Tráfico East–West predominante
+- Crecimiento esperado del 50%
+- Disponibilidad crítica
+- Presupuesto limitado
+- Equipo operativo pequeño
 
-### Universidad Tecnológica de Pereira
-
-**Redes de Datos — Unidad 1 — 10 horas**
+<div class="mt-8 text-sm opacity-70">
+Universidad Nacional de Colombia · Redes de Datos · Unidad 1
+</div>
