@@ -557,7 +557,11 @@ $$
 A = \frac{MTBF}{MTBF + MTTR}
 $$
 
+> Donde:
+> - MTBF: tiempo medio entre fallas.
+> - MTTR: tiempo medio de reparación o recuperación.
 
+Ejemplo: 
 Con MTBF = 8.760 horas y MTTR = 4 horas:
 
 $$
