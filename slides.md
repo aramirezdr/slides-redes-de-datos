@@ -551,15 +551,18 @@ Un Tier no es una garantía de disponibilidad de extremo a extremo para una apli
 
 # Disponibilidad: modelo simplificado
 
-\[
-A=\frac{MTBF}{MTBF+MTTR}
-\]
+La disponibilidad simplificada de un componente reparable es:
+
+$$
+A = \frac{MTBF}{MTBF + MTTR}
+$$
+
 
 Con MTBF = 8.760 horas y MTTR = 4 horas:
 
-\[
+$$
 A=\frac{8760}{8760+4}=0.999543
-\]
+$$
 
 **Disponibilidad aproximada: 99,9543%.**
 
