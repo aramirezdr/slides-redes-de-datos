@@ -954,6 +954,8 @@ layout: end
 Universidad Nacional de Colombia · Redes de Datos · Unidad 1
 </div>
 
+---
+
 # Unidad 2
 
 ## Implementación de Redes para Data Center
@@ -1194,11 +1196,11 @@ layout: section
 ## Ejemplo: puertos de acceso
 
 Un leaf tiene 48 puertos de 25 Gb/s:
-
+$
 \[
 48\times25\times2=2400\ \text{Gb/s}
 \]
-
+$
 **Capacidad agregada teórica full-duplex: 2,4 Tb/s.**
 
 > Esta cifra no prueba por sí sola que el switch o la fabric sean no bloqueantes.
