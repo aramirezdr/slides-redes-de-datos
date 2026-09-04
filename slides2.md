@@ -5,7 +5,6 @@ info: |
   Redes de Datos
   Especialización en Gestión de Redes de Datos
   Universidad Nacional de Colombia
-  Duración sugerida: 8 a 10 horas
 author: Universidad Nacional de Colombia
 date: 2026
 class: text-center
@@ -24,9 +23,6 @@ mdc: true
 
 Universidad Nacional de Colombia
 
-<div class="abs-br m-6 text-sm opacity-70">
-Duración sugerida: 8–10 horas
-</div>
 
 ---
 layout: intro
