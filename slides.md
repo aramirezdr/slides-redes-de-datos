@@ -954,20 +954,6 @@ layout: end
 Universidad Nacional de Colombia · Redes de Datos · Unidad 1
 </div>
 
-
----
-theme: default
-title: Unidad 2 — Implementación de Redes para Data Center
-info: |
-  Redes de Datos
-  Especialización en Gestión de Redes de Datos
-  Universidad Nacional de Colombia
-author: Universidad Nacional de Colombia
-date: 2026
-class: text-center
-highlighter: shiki
-lineNumbers: false
-mdc: true
 ---
 
 # Unidad 2
