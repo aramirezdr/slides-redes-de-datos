@@ -568,7 +568,7 @@ $$
 A=\frac{8760}{8760+4}=0.999543
 $$
 
-**Disponibilidad aproximada: 99,9543%.**
+**Disponibilidad aproximada: 99,9543%, equivalente a cerca de 4 horas de indisponibilidad anual.**
 
 > El modelo no representa fallas comunes, dependencias, mantenimiento, software o errores humanos.
 
